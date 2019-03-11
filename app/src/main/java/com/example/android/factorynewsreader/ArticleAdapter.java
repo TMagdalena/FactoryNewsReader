@@ -15,7 +15,6 @@ import java.util.ArrayList;
  * based on a data source, which is a list of {@link Article} objects
  */
 public class ArticleAdapter extends ArrayAdapter<Article> {
-
     /**
      * Create a new {@link ArticleAdapter} object
      *
@@ -36,9 +35,8 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
 
         Article currentArticle = getItem(position);
 
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image);
-        //imageView.set(currentArticle.getImageURL());
-        imageView.setVisibility(View.VISIBLE);
+        new DownloadImage((ImageView) listItemView.findViewById(R.id.image))
+                .execute(currentArticle.getImageURL());
 
         TextView titleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
         titleTextView.setText(currentArticle.getTitle());
@@ -49,5 +47,6 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
         return listItemView;
 
     }
+
 
 }

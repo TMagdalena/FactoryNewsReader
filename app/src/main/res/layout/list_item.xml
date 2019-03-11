@@ -8,6 +8,7 @@
     android:orientation="horizontal">
 
     <ImageView
+        android:scaleType="centerCrop"
         android:id="@+id/image"
         android:layout_width="88dp"
         android:layout_height="88dp" />
@@ -17,6 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
         android:paddingLeft="16dp"
         android:paddingRight="6dp">
 
@@ -26,7 +29,6 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="top"
-            android:paddingTop="6dp"
             android:textStyle="bold"
             tools:text="title" />
 
@@ -35,7 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingBottom="6dp"
             tools:text="description" />
 
     </LinearLayout>
