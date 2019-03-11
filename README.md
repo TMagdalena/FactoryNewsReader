@@ -1,1 +1,1 @@
-# FactoryNewsReader
+# NewsReader
